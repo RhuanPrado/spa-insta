@@ -24,7 +24,7 @@ function Login(): JSX.Element {
     }
 
     try {
-      const response = await fetch(process.env.API_URL + '/authorization', {
+      const response = await fetch(process.env.NEXT_PUBLIC_API_URL + '/authorization', {
         method: 'POST',
         headers: {
           'Content-Type': 'application/json',

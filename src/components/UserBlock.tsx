@@ -30,7 +30,7 @@ function UserBlock({ userData, remove }) {
       } else {
         friends = user?.friends ? [...user.friends, id] : [id]
       }
-      const response = await fetch(`${process.env.API_URL}/user/friends`, {
+      const response = await fetch(`${process.env.NEXT_PUBLIC_API_URL}/user/friends`, {
         method: 'POST',
         headers: {
           'Content-Type': 'application/json',

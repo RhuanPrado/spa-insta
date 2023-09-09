@@ -10,6 +10,8 @@ COPY package*.json ./
 # Instale as dependências do projeto
 RUN npm install
 
+COPY .env.local ./
+
 # Copie o restante do código-fonte para o contêiner
 COPY . .
 

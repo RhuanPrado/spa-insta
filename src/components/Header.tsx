@@ -4,8 +4,11 @@ import { useAppSelector } from 'src/store/reducers';
 import { HeaderContainer, Nav, Title } from 'src/styles/global';
 
 function HeaderApp() {
-
   const user = useAppSelector(state => state.user)
+
+  // Verifique se o objeto user está definido antes de acessar suas propriedades
+  const userId = user ? user.id : null;
+  const username = user ? user.username : null;
 
   return (
     <HeaderContainer>
@@ -21,12 +24,16 @@ function HeaderApp() {
           <li>
             <Link href="/posts/users">Usuários</Link>
           </li>
-          <li>
-            <Link href={`/posts/users/${user.id}/${user.username}`}>Meu Perfil</Link>
-          </li>
-          <li>
-            <Link href="/login">Sair</Link>
-          </li>
+          {user && ( // Renderize os links relacionados ao usuário somente se o usuário estiver autenticado
+            <>
+              <li>
+                <Link href={`/posts/users/${userId}/${username}`}>Meu Perfil</Link>
+              </li>
+              <li>
+                <Link href="/login">Sair</Link>
+              </li>
+            </>
+          )}
         </ul>
       </Nav>
     </HeaderContainer>

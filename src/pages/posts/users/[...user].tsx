@@ -9,7 +9,7 @@ function UsersProfile(): JSX.Element {
   const { query } = useRouter()
   const { user } = query
 
-  const [posts, setPosts] = useState()
+  const [posts, setPosts] = useState(null)
 
   const getusers = async () => {
     try {
@@ -34,13 +34,15 @@ function UsersProfile(): JSX.Element {
   }
 
   useEffect(() => {
-    getusers()
-  }, [])
+    if (user && user.length >= 2) {
+      getusers()
+    }
+  }, [user])
 
   return (
-    posts??<>
+    posts === null ? <>loading...</> : <>
       <HeaderApp />
-      <Title>Publicações de {user[1]}</Title>
+      <Title>Publicações de {user ? user[1] : ''}</Title>
       <Timeline posts={posts} />
     </>
   );

@@ -10,7 +10,7 @@ function Friends(): JSX.Element {
 
   const getusers = async () => {
     try {
-      const response = await fetch(process.env.API_URL + '/user/friends', {
+      const response = await fetch(process.env.NEXT_PUBLIC_API_URL + '/user/friends', {
         method: 'GET',
         headers: {
           authorization: `Bearer ${localStorage.getItem('token')}`
