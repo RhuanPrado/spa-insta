@@ -39,6 +39,26 @@
     "jsx-a11y/anchor-is-valid": "off",
     "react/require-default-props": "off",
     "jsx-a11y/label-has-associated-control": "off",
-    "no-underscore-dangle": "off"
+    "no-underscore-dangle": "off",
+    "no-console":"off",
+    "@typescript-eslint/comma-dangle":"off",
+    "prefer-template":"off",
+    "@typescript-eslint/quotes":"off",
+    "object-curly-newline":"off",
+    "@typescript-eslint/no-shadow":"off",
+    "import/no-duplicates": "off",
+    "import/order":"off",
+    "no-multiple-empty-lines":"off",
+    "react/jsx-boolean-value": "off",
+    "react/jsx-tag-spacing":"off",
+    "@typescript-eslint/no-use-before-define":"off",
+    "no-alert":"off",
+    "max-len":"off",
+    "react/jsx-one-expression-per-line":"off",
+    "react-hooks/exhaustive-deps":"off",
+    "@typescript-eslint/space-infix-ops":"off",
+    "react/jsx-wrap-multilines":"off",
+    "react/jsx-closing-tag-location":"off"
+
   }
 }

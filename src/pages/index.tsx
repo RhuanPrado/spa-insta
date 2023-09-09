@@ -1,12 +1,15 @@
 import MetaTitle from '../components/MetaTitle';
 
-import HomeContainer from '../styles/pages/home';
+import HomeContainer, { StartLink, LinksContainer } from '../styles/pages/home';
 
 function Home(): JSX.Element {
   return (
     <HomeContainer>
       <MetaTitle page="Home" />
-      <h1>Home</h1>
+      <h1>Bem-vindo ao Insta</h1>
+      <LinksContainer>
+        <StartLink href="/login">Começar</StartLink>
+      </LinksContainer>
     </HomeContainer>
   );
 }

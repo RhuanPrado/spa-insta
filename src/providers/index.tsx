@@ -8,6 +8,7 @@ import { defaultTheme } from 'src/styles/theme'
 // Reducer
 import store from '../store/reducers'
 
+
 type RootProviderProps = {
   children: ReactNode
 }

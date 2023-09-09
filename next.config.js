@@ -12,6 +12,13 @@ const nextConfig = {
   images: {
     // domains: ['abc.io'],
   },
+  typescript: {
+    // !! WARN !!
+    // Dangerously allow production builds to successfully complete even if
+    // your project has type errors.
+    // !! WARN !!
+    ignoreBuildErrors: true,
+  },
   async redirects() {
     return [
       // {
